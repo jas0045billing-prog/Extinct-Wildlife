@@ -1,0 +1,136 @@
+/* Nature theme (muted palette) - style.css */
+
+/* Reset & base */
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; height:100%; font-family: "Segoe UI", Roboto, Arial, sans-serif; background: linear-gradient(180deg,#f7f6f2,#eef2ef); color:#213733; }
+/* Apply the nature theme correctly */
+body.theme-nature-muted {
+  background: linear-gradient(180deg, #869958 0%, #e6e8e3 40%, #f9f9f7 100%) !important;
+  color: #2b3531 !important;
+}
+
+/* Palette (muted) */
+/* primary teal-blue: #2b6b6b, sand accent: #e9dcc9, olive accent: #7a8b6f, soft highlight: #cbe7dc */
+
+/* Header */
+.gallery img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; 
+  height: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.site-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 36px;
+  background: linear-gradient(180deg, rgba(12,28,30,0.95), rgba(7,18,18,0.9));
+  color: #eaf6f2;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  box-shadow: 0 6px 20px rgba(8,12,10,0.35);
+}
+.site-header.small { padding:12px 20px; }
+
+.brand .logo {
+  font-weight:800;
+  letter-spacing:0.6px;
+  color:#cde8e1;
+  font-size:1.15rem;
+}
+.brand .sub { color:#a9d6ce; font-size:0.85rem; margin-top:4px; opacity:0.95; }
+
+/* Nav */
+.nav ul { list-style:none; margin:0; padding:0; display:flex; gap:18px; align-items:center; }
+.nav a { color:#d7eef0; text-decoration:none; padding:8px 12px; border-radius:10px; font-weight:600; transition: all .18s; }
+.nav a:hover { transform: translateY(-3px); background: rgba(255,255,255,0.03); }
+.nav a.active { background: rgba(203,231,220,0.06); box-shadow: inset 0 -3px 0 rgba(0,0,0,0.06); }
+
+/* Hero */
+.hero { display:flex; gap:28px; align-items:center; height: 60vh;  padding:56px 36px; min-height:400px; position:relative; overflow:hidden; }
+.hero-text { flex:1; max-width:720px; color:#e6f6f1; }
+.hero h1 { font-size:3rem; margin:0 0 14px 0; color:#dff6f0; text-shadow: 0 6px 16px rgba(8,20,20,0.24); }
+.lead { font-size:1.05rem; color:#255E12; margin:0 0 20px 0; max-width:52ch; line-height:1.5; }
+.btn { display:inline-block; text-decoration:none; padding:12px 18px; border-radius:12px; font-weight:700; }
+.btn.primary { background: linear-gradient(90deg,#5E7331,#6aa9a3); color:#fff; box-shadow: 0 12px 30px rgba(40,90,88,0.12); }
+.btn.primary:hover { transform: translateY(-6px); }
+
+/* Hero visual */
+.hero-visual { flex: 1 ; border-radius:14px; overflow:hidden; position:relative; box-shadow: 0 24px 60px rgba(14,36,34,0.32); background: linear-gradient(180deg,#062425,#0a2e2d); padding:10px; }
+.hero-visual img { width:100%; height:100%; object-fit:cover; display:block; transform: scale(1.02); transition: transform 12s linear; border-radius:10px; }
+.hero:hover .hero-visual img { transform: scale(1); }
+.visual-glow { position:absolute; inset:0; pointer-events:none; background: radial-gradient(circle at 80% 80%, rgba(170,220,212,0.06), transparent 12%); mix-blend-mode: screen; }
+
+/* Section title */
+.section-title { text-align:center; margin:46px 0 18px; font-size:1.6rem; color:#274d48; }
+
+/* Cards grid */
+.cards { display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; padding:0 36px 56px; }
+.card { background: linear-gradient(180deg,#ffffff,#f6faf8); border-radius:12px; overflow:hidden; box-shadow: 0 10px 26px rgba(14,40,36,0.06); transition: transform .22s ease, box-shadow .22s ease; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(12,40,36,0.12); }
+.card-link { display:flex; gap:12px; align-items:center; text-decoration:none; color:inherit; padding:14px; }
+.card-thumb { width:96px; height:72px; flex:0 0 96px; overflow:hidden; border-radius:8px; background:#e9ddd0; display:flex; align-items:center; justify-content:center; }
+.card-thumb img { width:100%; height:100%; object-fit:cover; display:block; filter: saturate(.9); }
+.card-body h3 { margin:0 0 6px; color:#163e38; font-size:1.05rem; }
+.card-body .muted { margin:0; color:#587c76; font-size:0.95rem; }
+
+/* Callout */
+.callout { background: linear-gradient(180deg,#f7f7f5,#f2f6f3); margin:18px 36px 56px; padding:18px; border-radius:12px; color:#2e4f4a; box-shadow: 0 8px 22px rgba(14,36,34,0.04); }
+
+/* Animal page */
+.animal-page { max-width:1100px; margin:28px auto; padding:0 20px 60px; }
+.animal-hero { display:grid; grid-template-columns: 1fr 380px; gap:24px; align-items:start; margin-bottom:18px; }
+.animal-hero .left h1 { margin:0; font-size:2.2rem; color:#163e38; }
+.sci { font-size:0.95rem; color:#6f958f; display:block; margin-top:6px; }
+.facts ul { margin:8px 0 0 18px; color:#405f5a; }
+
+/* image-frame */
+.image-frame { border-radius:12px; overflow:hidden; background:linear-gradient(180deg,#f5f5f2,#f1f3f0); padding:6px; box-shadow: 0 12px 30px rgba(14,36,34,0.06); }
+.image-frame img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Buttons and small helpers */
+.btn.ghost { background: transparent; border: 1px solid rgba(37,93,88,0.08); color:#214f49; }
+
+/* story card */
+.story { background:#fff; padding:14px; border-radius:10px; box-shadow: 0 8px 22px rgba(14,36,34,0.04); margin-top:12px; }
+
+/* Lightbox (CSS :target) */
+.lightbox { position: fixed; inset:0; display:none; align-items:center; justify-content:center; background: rgba(4,8,10,0.82); z-index:999; padding:20px; }
+.lightbox:target { display:flex; }
+.lightbox-inner { max-width:1000px; width:100%; background: transparent; border-radius:10px; }
+.lightbox-inner img { width:100%; height:auto; display:block; border-radius:8px; }
+.lb-caption { color:#cfe7de; margin-top:10px; text-align:center; }
+
+/* Footer */
+.site-footer { padding:18px; text-align:center; background: linear-gradient(180deg,#072423,#051916); color:#cfeee5; margin-top:30px; }
+
+/* Responsive queries */
+@media (max-width: 1024px) {
+  .cards { grid-template-columns: repeat(2,1fr); padding:0 22px 40px; }
+  .hero { padding:40px 22px; }
+  .hero-visual { display:none; }
+}
+
+@media (max-width: 768px) {
+  .site-header { padding:12px 14px; }
+  .nav ul { display:none; }
+  .hero { padding:26px 14px; flex-direction:column; gap:18px; }
+  .hero-text h1 { font-size:1.8rem; }
+  .cards { grid-template-columns: 1fr; padding:0 16px 30px; }
+  .animal-hero { grid-template-columns: 1fr; }
+  .hero-visual { display:block; width:100%; }
+}
+
+/* small phones */
+@media (max-width:420px) {
+  .hero h1 { font-size:1.5rem; }
+  .brand .logo { font-size:1rem; }
+  .card-body h3 { font-size:1rem; }
+  /* Apply the nature theme correctly */
+
+
+}
